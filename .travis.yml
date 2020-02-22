@@ -19,12 +19,12 @@ after_success:
     - docker push dolgan12/multi-server
     - docker push dolgan12/multi-worker
 deploy:
-    edge: true,
+    edge: true
     provider: elasticbeanstalk
-    region: us-east-2,
-    app: multi-docker,
-    env: multiDocker-env,
-    bucket_name: elasticbeanstalk-us-east-2-299896180806,
+    region: us-east-2
+    app: multi-docker
+    env: multiDocker-env
+    bucket_name: elasticbeanstalk-us-east-2-299896180806
     bucket_path: docker-multi
     on:
         branch: master
